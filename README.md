@@ -1,5 +1,6 @@
 # webDevelopment_FinalProject
-The final project for the web development course
+
+The final project for the web development course.
 
 ## Project Instruction
 

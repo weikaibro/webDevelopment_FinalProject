@@ -1,0 +1,118 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+	<link href="./style.css" rel="stylesheet" type="text/css"/>
+    <script>
+      function reset() { 
+        document.getElementById("game").innerHTML="<h2>小遊戲(在五個按鈕中猜猜看先輩的位置)</h2><button id='b0' onclick='score();' class='sbut'>NO1</button> <button id='b1' onclick='score();' class='sbut'>NO2</button> <button id='b2' onclick='score();' class='sbut'>NO3</button> <button id='b3' onclick='score();' class='sbut'>NO4</button> <button id='b4' onclick='score();' class='sbut'>NO5</button><br><br><button id='b5' onclick='reset();' class='sbut'>重新開始</button>";
+          document.getElementById("price").innerHTML="";
+        }
+      var a = "b" + Math.floor(Math.random()*5);
+      function add() {
+        document.getElementById("price").innerHTML="<img src='./image/redtea.jpg' class='simg'></img>";
+      }
+      function betray() { 
+        document.getElementById("price").innerHTML="<img src='./image/betray.jpg' class='simg'></img>";
+      }
+      function tea() { 
+        var n = prompt('恭喜猜對，先輩要送你獎勵喔，請輸入金鑰(提示:先輩座右銘數字)');
+        if (n == 114514) {
+          alert("恭喜獲得獎勵，先輩送你紅茶一杯");
+          add();
+        } else {
+          alert("你是一個一個一個叛徒阿阿阿阿阿")
+          betray();
+        }
+      }
+      function score() {
+        var y = event.target.getAttribute('id');
+        if (a == y) {
+          alert("呀哩馬斯內！");
+          document.getElementById(y).innerHTML="你找到先輩了！";
+          a = "b" + Math.floor(Math.random()*5);
+          tea();
+        } else {
+          document.getElementById(y).innerHTML="先輩不在這裡喔！";
+        }
+      }
+    </script>
+  </head>
+
+  <body id="sb">
+    <div id="sheader">
+      <h1>野獸先輩</h1>
+      <h3>
+        <a href="./mainpage2.html">回到主頁</a>
+      </h3>
+    </div>
+    <div id="scontent">
+      <img src="./image/114514.jpg" class="simg"></img>
+      <h2>日本著名演員，亦是一位24歲在學學生</h2>
+      <br>
+    </div>
+
+	  <table id="stab">
+      <caption><h2>先輩的基本介紹</h2></caption>
+        <tr>
+          <th>姓名</th>
+          <td>田所浩二</td>
+        </tr>
+        <tr>
+          <th>性別</th>
+          <td>男</td>
+        </tr>
+        <tr>
+          <th>年齡</th>
+          <td>24歲</td>
+        </tr>
+        <tr>
+          <th>喜歡的運動</th>
+          <td>健身</td>
+        </tr>
+        <tr>
+          <th>特殊嗜好</th>
+          <td>王道征途、泡泡系</td>
+        </tr> 
+    </table>
+    <br>
+	  <hr>
+
+    <h2>影片簡介</h2>
+    <iframe width="834" height="469" src="https://www.youtube.com/embed/HE8uxL_z1lI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <br><br><br><br><br><br><hr><br>
+
+    <img src="./image/konzi.jpg" class="simg"></img>
+    <h2>先輩的座右銘:逸一時，誤一世</h2>
+    <pre><h2>
+      先輩在春秋戰國時期對於他的後輩留有這一番金句，
+      其意為:若是我們安逸一時，便會導致人生後續一世出現錯誤，
+      此番言語主要勉勵我們不可隨意偷懶，要時刻奮鬥努力，
+      如此方能立於不敗之地。
+
+      後來人們為了便於記住先輩的教誨，
+      開始研究更簡單的記法，
+      終於，在科學家的努力之下，
+      發現了宇宙常數：114514，
+      剛好是先輩座右銘的諧音，
+      (其轉換方法為將「逸一時，誤一世」透過類比數位轉換器(ADC)，
+      由纇比訊號轉換為數位訊號，並累積數位訊號值的個數再換成十進制)，
+      是故，114514常數便流傳至今。
+    </h2></pre> 
+	
+    <div>
+      <br><br><hr>
+      <div id="game">
+        <h2>小遊戲(在五個按鈕中猜猜看先輩的位置)</h2>
+        <button id="b0" onclick="score();" class="sbut">NO1</button>
+        <button id="b1" onclick="score();" class="sbut">NO2</button>
+        <button id="b2" onclick="score();" class="sbut">NO3</button>
+        <button id="b3" onclick="score();" class="sbut">NO4</button>
+        <button id="b4" onclick="score();" class="sbut">NO5</button><br><br>
+        <button id="b5" onclick="reset();" class="sbut">重新開始</button>
+      </div><br>
+      
+    </div>
+    <br>
+    <p>本章節提及相關內容純屬虛構，並不符合地球常識，請勿輕信。</p>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="./style.css" rel="stylesheet" type="text/css"/>
+		<script>
+			function show() {
+				var n = document.getElementById("name").value;
+				if(n != "") {
+					document.getElementById("bo").innerHTML += "<h2>謝謝你，"+n+"，感謝您的寶貴意見!</h2>";
+					document.getElementById("fo").innerHTML =  "";
+				}
+			}
+		</script>
+  </head>
+
+  <body id="bo">
+    <h1>歡迎參觀顏晉寬的主頁</h1><br>
+		<h3>( 切換到<a href='index.html'>威凱's page</a> )</h3>
+		<h2>以下可以連結到三個頁面</h2>
+    <h2>
+			興趣愛好：<a href="./myaquarium.html">飼養水族</a>
+			/ 感興趣的食物：<a href="./egg.html">蛋塔</a>
+			/ 特殊嗜好：<a href="./114514.html">野獸先輩</a>
+		</h2>
+	
+		<form id="fo">
+			<h2>留下一些您的參觀意見吧</h2>
+			您的大名: <input id="name" type="text"></input><br><br>
+			您的系級: <input type="text"></input><br><br>
+			您的學號: <input type="text"></input><br><br>
+			您的建議: <textarea></textarea><br><br>
+			<input type="submit" onclick="show()"></input><br><br>
+		</form>
+  </body>
+</html>

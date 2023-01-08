@@ -1,0 +1,247 @@
+/* 1 */
+.body1, .body2, .body3 {
+	font-family: monospace;
+	background-color: #f7e18f;
+}
+.intro1 { 
+	float: left;
+	font-size: 25px;
+	margin-left: 50px;
+}
+.intro2 { 
+	float: right;
+	font-size: 30px;
+	margin-right: 50px;
+}
+.intro1, .intro2 { 
+	display: inline;
+	margin-top: 30px;
+}
+.pfp1 {
+	float: left;
+	margin-left: 25%;
+	text-align: center;
+}
+.pfp1>img {
+	width: 275px;
+	height: 275px;
+}
+.pfp1>a>img {
+	width: 32px;
+	height: 32px;
+}
+.pfp1>hr {
+	width: 15%;
+	border-color: #f59b42;
+}
+.pfp2 {
+	float: right;
+	margin-right: 25%;
+}
+
+.pfp1, .pfp2 {
+	display: inline;
+	margin-top: 100px;
+}
+.foot1 {
+	float: left;
+	margin-left: 3%;
+	margin-top: 150px;
+	font-size: 20px;
+}
+.foot2 {
+	float: left;
+	margin-left: 3%;
+	margin-top: 40px;
+	font-size: 20px;
+}
+.foot3 {
+	float: left;
+	margin-left: 3%;
+	margin-top: 40px;
+	font-size: 20px;
+}
+	
+* {
+	box-sizing: border-box;
+}
+.year {
+	float: right;
+}
+/* 時間線與其他物件的關係 */
+.timeline {
+	position: relative;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+/* 時間線自己 */
+.timeline::after {
+	content: '';
+	position: absolute;
+	width: 6px;
+	background-color: gray;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	margin-left: -3px;
+}
+
+/*  圓圈與其他物件的關係 */
+.container {  
+	padding: 10px 40px;
+	position: relative;
+	background-color: inherit;
+	width: 50%;
+}
+/* 圓圈自己*/
+.container::after {
+	content: '';
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	right: -17px;
+	background-color: white;
+	border: 4px solid lightblue;
+	top: 80px;
+	z-index: 1;
+}
+
+.left {
+	left: 0;
+}
+.right {
+	left: 50%;
+}
+
+.left::before {
+	content: " ";
+	height: 0;
+	position: absolute;
+	top: 90px;
+	width: 0;
+	z-index: 1;
+	right: 30px;
+	border: medium solid white;
+	border-width: 10px 0 10px 10px;
+	border-color: transparent transparent transparent lightblue;
+}
+.right::before {
+	content: " ";
+	height: 0;
+	position: absolute;
+	top: 90px;
+	width: 0;
+	z-index: 1;
+	left: 30px;
+	border: medium solid white;
+	border-width: 10px 10px 10px 0;
+	border-color: transparent lightblue transparent transparent;
+}
+
+.right::after {
+	left: -16px;
+}
+
+.content {
+	padding: 20px 30px;
+	background-color: #9ae9f5;
+	position: relative;
+	border-radius: 6px;
+}
+
+.table1 th, td {
+	padding: 3px 8px;
+}
+
+.body3>h1 {
+	text-align: center;
+}
+.genart1 {
+	float: left;
+	padding-left: 140px;
+}
+.genart1 img {
+	width: 200px;
+	height: 200px;
+	margin-bottom: 10px;
+}
+.genart2 {
+	float: right;
+	padding-right: 140px;
+}
+
+/* 2 */
+#sb {
+	text-align:center
+}
+#stab {
+	margin-left:auto; 
+	margin-right:auto;
+	text-align:center;
+}
+#stab, #stab tr th, #stab tr td {
+	border:dashed;
+}
+.simg {
+	width:600px;
+}
+.sbut {
+	width:10em;
+	height:5em;
+}
+
+#eheader {
+	background-color:#FFD4D4;
+}
+#econtent {
+	background-color:#FFECC9;
+}	
+#tab1 {
+	background-color:#E6CAFF;
+	text-align:center;
+}
+.eggimg {
+	width:600px;
+}
+.eggtaimg {
+	width:300px;
+}
+#eggtab, #eggtab tr th, #eggtab tr td {
+	border:3px #00BB00 dashed;
+}
+#bo {
+	background-color:lightblue;
+	text-align:center;
+}
+#fo {
+	border:dashed;
+}
+#aheader {
+	background-color:#A6FFFF;
+}
+#acontent {
+	background-color:#00FFFF;
+}
+#afoot {
+	background-color:#00E3E3;
+}
+.aimg {
+	width:600px;
+}
+.timg {
+	width:300px;
+}
+#aqb {
+	text-align:center;
+}
+#atab {
+	margin-left:auto; 
+	margin-right:auto;
+	text-align:center;
+}
+#atab,#atab tr th, #atab tr td {
+	border:dashed;
+}
+#ali {
+	display:inline-block;
+}

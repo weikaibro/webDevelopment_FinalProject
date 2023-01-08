@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset='utf-8'/>
+		<title>index</title> 
+		<link rel='stylesheet' type='text/css' href='./style.css'>
+	</head>
+
+	<body id='body1' class='body1'>
+		<div class='intro1'>
+			<b>威凱's page ( 切換到<a href='./mainpage2.html'>晉寬's page</a> )</b>
+		</div>
+		<div class='intro2'>
+			<button onclick='dark()' id='btn1'>Dark Mode</button>
+			&nbsp;<a href='./index.html'>Home</a>
+			&nbsp;<a href='./aboutMe.html'>About</a>
+			&nbsp;<a href='./more.html'>More</a>
+		</div>
+		<br><br><br><br>
+		
+		<div class='pfp1'>
+			<img src='./image/shark.jpg'></img>
+			<h1><font size="6">Wayne</font></h1>
+			<hr>
+			<h3><font size="5">IIM STUDENT</font></h3>
+			<a href='https://www.facebook.com/'><img src='./image/facebook.png' style='margin:10px'></img></a>
+			<a href='https://twitter.com/'><img src='./image/twitter.png' style='margin:10px'></img></a>
+			<a href='https://tw.linkedin.com/'><img src='./image/linkedin.png' style='margin:10px'></img></a>
+			<a href='https://www.instagram.com/'><img src='./image/instagram.png' style='margin:10px'></img></a>
+		</div>
+		<div class='pfp2'>
+			<h1><font size='7'>Hello World</font></h1>
+			<p><font size='5'>Here's my website created with html</font></p>
+			<form name='login' action='http://httpbin.org/post' method='post'>			
+				<h2><font size='6'>Contact Me</font></h2>
+				Your Name: <br><input type='text' required></input><br><br>
+				Your Email: <br><input type='email' required></input><br><br>
+				Message: <br><textarea rows="4" cols="25" required></textarea>
+				<input type='submit' value='submit'></input>
+			</form>
+		</div>
+		
+		<div class='foot1'>
+			<p>Copyright &copy; 2022 Wayne 威凱 - IIM student</p>
+		</div>
+		<script>
+			function dark() {
+				var btnText = document.getElementById('btn1');
+				if ( btnText.innerHTML == 'Dark Mode' ) {
+					document.getElementById('body1').style = "background-color: #9ae9f5;";
+					btnText.innerHTML = 'Light Mode';
+				} else if ( btnText.innerHTML == 'Light Mode' ) {
+					document.getElementById('body1').style = "background-color: #f7e18f;";
+					btnText.innerHTML = 'Dark Mode';
+				}
+			}
+		</script>
+	</body>
+</html>

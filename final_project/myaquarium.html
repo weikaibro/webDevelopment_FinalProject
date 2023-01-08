@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+	  <link href="./style.css" rel="stylesheet" type="text/css"/>
+    <script>
+      function salt() { 
+        var x = document.getElementById("proportion").value;
+        var y = document.getElementById("water").value;
+        var z = document.getElementById("temp").value;
+        var t = (1305*(x-1) + 0.3*(z-17.5));
+        var ts = (1305*(x-1) - 0.2*(17.5-z));
+        if(z >= 17) {
+          document.getElementById("total_salt").innerHTML = "需要" + (t.toFixed(2)) + "克的鹽";
+        } else {
+          document.getElementById("total_salt").innerHTML = "需要" + (ts.toFixed(2)) + "克的鹽";
+        }
+      }
+    </script>
+  </head>
+
+  <body id="aqb">
+    <div id="aheader">
+      <br><br>
+      <h1>我的海洋世界</h1>
+      <h3>
+        <a href="./mainpage2.html">回到主頁</a>
+      </h3><br>
+    </div>
+	
+    <div id="acontent">
+      <br>
+      <h2>魚缸為背部過濾系統海水缸，飼養魚口3隻、以及寄居蟹若干等</h2>
+      <img src="./image/tank.jpg" class="aimg"></img>
+      <br><br>
+      <h2>生物簡介：</h2>
+      <table id="atab">
+        <tr>
+          <th rowspan="2"><h3>魚類</h3></th>
+          <td><h3>三間雀</h3></td>
+          <td><h3>大豆娘魚</h3></td>
+          <td><h3>小豆娘魚</h3></td>
+        </tr>
+        <tr>
+          <td><img class="timg" src="./image/fish1.jpg"></img></td>
+          <td><img class="timg" src="./image/fish2.jpg"></img></td>
+          <td><img class="timg" src="./image/fish3.jpg"></img></td>
+        </tr>
+        <tr>
+          <th  rowspan="2"><h3>寄居蟹與其他生物</h3></th>
+          <td><h3>大寄居蟹</h3></td>
+          <td><h3>小寄居蟹</h3></td>
+          <td><h3>食藻螺</h3></td>
+        </tr>
+        <tr>
+          <td><img class="timg" src="./image/crab1.jpg"></td>
+          <td><img class="timg" src="./image/crab2.jpg"></td>
+          <td><img class="timg" src="./image/snail.jpg"></td>
+        </tr>
+      </table>
+      <br><br><br><br>
+      <h2>背部過濾系統設備：</h2>
+      <ol id="ali">
+        <li><a href="#white"><h3>白綿物理過濾</h3></a></li>
+        <li><a href="#protein"><h3>蛋白除沫器</h3></a></li>
+        <li><a href="#pump"><h3>水汞</h3></a></li>
+      </ol>
+      <br>
+      <img src="./image/back.jpg" class="aimg"></img><br><br><br><br>
+        <h3 id="white">白綿功能：缸中海水流入過濾系統之第一道工序，其旨在將大型髒污（如魚糞、過剩之飼料等）留在棉布上，以防止此些髒污再次回到魚缸</h3>
+      <img src="./image/white.jpg" class="aimg"></img><br><br><br><br>
+        <h3 id="protein">蛋白除沫器：利用海水表面張力之物理特性，將海水灌入大量氣泡，並利用氣泡向上堆疊將水中之有害化學物質（如AMONIA）以及細小微粒排出水體</h3>
+      <img src="./image/dc80.jpg" class="aimg"></img><br><br><br><br>
+        <h3 id="pump">水汞：將過濾完的海水重新打回缸中，如此以完成一次循環</h3>
+      <img src="./image/pump.jpg" class="aimg"></img><br><br>
+    </div>
+	
+    <div id="afoot">
+      <br>
+      <p class="title">簡易比重計算區:</p>
+      請輸入欲調製之比重: <input id="proportion" type="number"></input><br>
+      請輸入淡水總量(公升): <input id="water" type="number"></input><br>
+      請輸入目前之溫度(攝氏): <input id="temp" type="number"></input><br>
+      <button onclick="salt()">calculate</button>
+      <p id="total_salt"></p><br>
+    </div>
+  </body>
+
+</html>
